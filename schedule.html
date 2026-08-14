@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ตารางเรียน - ระบบบริการการศึกษา</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <div class="brand">
+
+      <img src="MJU_LOGO.svg.webp"
+           alt="ตรามหาวิทยาลัยแม่โจ้">
+
+      <div>
+        <h1>มหาวิทยาลัยแม่โจ้</h1>
+        <p>ระบบบริการการศึกษา</p>
+      </div>
+
+    </div>
+
+    <div class="semester">
+      ภาคเรียนที่ 1/2569
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+<main class="schedule-container">
+
+  <!-- หัวข้อ -->
+  <section class="page-heading">
+
+    <div>
+      <p class="eyebrow">CLASS SCHEDULE</p>
+
+      <h2>ตารางเรียน</h2>
+
+      <p class="heading-description">
+        ตารางเรียนประจำภาคเรียนที่ 1/2569
+      </p>
+    </div>
+
+    <a href="index.html" class="back-button">
+      ← กลับหน้าหลัก
+    </a>
+
+  </section>
+
+
+  <!-- ข้อมูลนักศึกษา -->
+  <section class="student-info">
+
+    <div>
+      <span class="info-label">นักศึกษา</span>
+      <strong>นาย ณัฐกิจ โนวัน</strong>
+    </div>
+
+    <div>
+      <span class="info-label">รหัสนักศึกษา</span>
+      <strong>0931322793</strong>
+    </div>
+
+    <div>
+      <span class="info-label">คณะ</span>
+      <strong>วิทยาศาสตร์</strong>
+    </div>
+
+    <div>
+      <span class="info-label">สาขา</span>
+      <strong>วิทยาการคอมพิวเตอร์</strong>
+    </div>
+
+  </section>
+
+
+  <!-- เลือกวัน -->
+  <nav class="day-filter">
+
+    <button class="day-button active">ทั้งหมด</button>
+    <button class="day-button">จันทร์</button>
+    <button class="day-button">อังคาร</button>
+    <button class="day-button">พุธ</button>
+    <button class="day-button">พฤหัสบดี</button>
+    <button class="day-button">ศุกร์</button>
+
+  </nav>
+
+
+  <!-- ตาราง -->
+  <section class="schedule-section">
+
+    <div class="section-title">
+
+      <div>
+        <p class="eyebrow">WEEKLY SCHEDULE</p>
+        <h3>ตารางเรียนประจำสัปดาห์</h3>
+      </div>
+
+      <span class="course-count">
+        6 รายวิชา
+      </span>
+
+    </div>
+
+
+    <!-- ================= ตาราง Desktop ================= -->
+
+    <div class="schedule-table">
+
+      <!-- เวลา -->
+      <div class="time-column">
+
+        <div class="grid-header">เวลา</div>
+
+      </div>
+
+
+      <!-- จันทร์ -->
+      <div class="day-column">
+
+        <div class="grid-header">
+          จันทร์
+          <small>MON</small>
+        </div>
+
+        <article class="schedule-course green">
+
+          <span class="course-time">08:00 - 10:00</span>
+
+          <span class="course-code">
+            10301211
+          </span>
+
+          <h4>
+            คณิตศาสตร์สำหรับวิทยาการคอมพิวเตอร์
+          </h4>
+
+          <p>
+            Mathematics for Computer Science
+          </p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+      </div>
+
+
+      <!-- อังคาร -->
+      <div class="day-column">
+
+        <div class="grid-header">
+          อังคาร
+          <small>TUE</small>
+        </div>
+
+        <article class="schedule-course blue">
+
+          <span class="course-time">09:00 - 11:00</span>
+
+          <span class="course-code">
+            10301222
+          </span>
+
+          <h4>
+            โครงสร้างข้อมูลและอัลกอริทึม
+          </h4>
+
+          <p>
+            Data Structure and Algorithm
+          </p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+      </div>
+
+
+      <!-- พุธ -->
+      <div class="day-column">
+
+        <div class="grid-header">
+          พุธ
+          <small>WED</small>
+        </div>
+
+        <article class="schedule-course purple">
+
+          <span class="course-time">10:00 - 12:00</span>
+
+          <span class="course-code">
+            10301223
+          </span>
+
+          <h4>
+            รายวิชาตามตารางเรียน
+          </h4>
+
+          <p>
+            Course Information
+          </p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+      </div>
+
+
+      <!-- พฤหัสบดี -->
+      <div class="day-column">
+
+        <div class="grid-header">
+          พฤหัสบดี
+          <small>THU</small>
+        </div>
+
+        <article class="schedule-course orange">
+
+          <span class="course-time">13:00 - 15:00</span>
+
+          <span class="course-code">
+            10301225
+          </span>
+
+          <h4>
+            Software Engineering
+          </h4>
+
+          <p>
+            Software Engineering
+          </p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+      </div>
+
+
+      <!-- ศุกร์ -->
+      <div class="day-column">
+
+        <div class="grid-header">
+          ศุกร์
+          <small>FRI</small>
+        </div>
+
+        <article class="schedule-course teal">
+
+          <span class="course-time">08:00 - 10:00</span>
+
+          <span class="course-code">
+            10301231
+          </span>
+
+          <h4>Web Technology</h4>
+
+          <p>Web Technology</p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+
+        <article class="schedule-course green">
+
+          <span class="course-time">10:00 - 12:00</span>
+
+          <span class="course-code">
+            10700313
+          </span>
+
+          <h4>
+            English for Science and Innovation
+          </h4>
+
+          <p>
+            English for Science and Innovation
+          </p>
+
+          <span class="group">
+            กลุ่ม 1
+          </span>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- หมายเหตุ -->
+  <aside class="schedule-note">
+
+    <strong>ℹ️ หมายเหตุ</strong>
+
+    <p>
+      กรุณาตรวจสอบตารางเรียนและรายละเอียดรายวิชา
+      จากระบบบริการการศึกษาก่อนเข้าเรียนทุกครั้ง
+    </p>
+
+  </aside>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  งานทะเบียนและประมวลผล มหาวิทยาลัยแม่โจ้
+  · ข้อมูลจำลองเพื่อการศึกษา
+</footer>
+
+</body>
+</html>

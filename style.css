@@ -1,0 +1,397 @@
+/* =====================================================
+   1. สไตล์ทั่วไปและการตั้งค่าเริ่มต้น
+   ===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   2. ส่วนหัวเว็บและระบบเมนู
+   ===================================================== */
+.site-header {
+  background: #00743d;
+  color: #fff;
+}
+
+.header-inner {
+  max-width: 1152px;
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+}
+
+.brand h1 { margin: 0; font-size: 16px; }
+.brand p { margin: 2px 0 0; font-size: 12px; color: #d1fae5; }
+.semester { font-size: 13px; }
+
+.menu-link {
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.menu-link:hover, .menu-link.active { background: #00a65a; }
+.logout { background: #e11d48; padding: 8px 12px; border-radius: 6px; }
+.mobile-link { display: block; padding: 12px 16px; border-top: 1px solid #00743d; }
+
+/* =====================================================
+   3. หน้าหลัก (INDEX)
+   ===================================================== */
+.section-label {
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.quick-menu {
+  background: #fff;
+  padding: 16px 8px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.quick-menu span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.quick-menu:hover {
+  border-color: #00a65a;
+  transform: translateY(-2px);
+}
+
+.info-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0000000a;
+}
+
+.small-text { color: #64748b; font-size: 12px; margin-top: 4px; }
+
+.notice-green, .notice-red {
+  margin-top: 12px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+.notice-green { background: #ecfdf5; color: #00743d; }
+.notice-red { background: #fff1f2; color: #be123c; }
+
+/* =====================================================
+   4. หน้าผลการลงทะเบียน (REGISTRATION)
+   ===================================================== */
+.registration-summary {
+  background: linear-gradient(135deg, #00743d, #00a65a);
+  color: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.credit-box {
+  width: 90px;
+  height: 90px;
+  border: 7px solid #00c878;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.credit-box strong { font-size: 24px; }
+.credit-box span { font-size: 10px; }
+
+.stat-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+.stat-card strong { display: block; color: #00743d; font-size: 24px; }
+.stat-card span { color: #64748b; font-size: 12px; }
+
+.back-button {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #00743d;
+  border-radius: 7px;
+  color: #00743d;
+  font-size: 13px;
+  text-decoration: none;
+}
+.back-button:hover { background: #00743d; color: #fff; }
+
+.section-eyebrow { margin: 0 0 4px; color: #00a65a; font-size: 13px; font-weight: bold; }
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.registration-card {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #dbe3ea;
+  border-left: 4px solid #00a65a;
+  border-radius: 12px;
+}
+.registration-card.blue { border-left-color: #3b82f6; }
+.registration-card.orange { border-left-color: #f97316; }
+.registration-card h2 { margin: 4px 0; font-size: 15px; }
+.registration-card p { margin: 0; color: #64748b; font-size: 12px; }
+
+.course-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #cbd5e1;
+  font-size: 12px;
+}
+
+.success-badge {
+  background: #ecfdf5;
+  color: #087f4e;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+/* =====================================================
+   5. หน้าตารางเรียน (SCHEDULE)
+   ===================================================== */
+.schedule-container {
+  max-width: 1152px;
+  margin: auto;
+  padding: 24px 16px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.eyebrow { margin: 0 0 5px; color: #00743d; font-size: 12px; font-weight: bold; }
+.page-heading h2 { margin: 0; font-size: 26px; }
+.heading-description { margin: 5px 0 0; color: #64748b; font-size: 14px; }
+
+/* แถบข้อมูลนักศึกษา */
+.student-info {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.student-info > div {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.info-label {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+/* ปุ่มกรองวันเรียน */
+.day-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.day-button {
+  padding: 7px 14px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.day-button:hover, .day-button.active {
+  background: #00743d;
+  color: #fff;
+  border-color: #00743d;
+}
+
+/* ตารางแสดงวิชาเรียน */
+.schedule-section {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+.section-title h3 { margin: 0; font-size: 20px; }
+
+.course-count {
+  background: #d1fae5;
+  color: #00743d;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.schedule-table {
+  display: grid;
+  grid-template-columns: 60px repeat(5, 1fr);
+  min-width: 750px;
+  border: 1px solid #dbe3ea;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.time-column { border-right: 1px solid #dbe3ea; }
+
+.day-column {
+  min-width: 0;
+  min-height: 700px;
+  border-right: 1px solid #dbe3ea;
+  transition: opacity 0.2s ease;
+}
+.day-column:last-child { border-right: 0; }
+.day-column.hidden-day { display: none !important; }
+
+.grid-header {
+  height: 58px;
+  background: #00743d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+.grid-header small { font-size: 10px; opacity: 0.8; }
+
+.time-slot {
+  height: 72px;
+  padding-top: 8px;
+  text-align: center;
+  color: #64748b;
+  font-size: 11px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* การ์ดวิชาเรียนในตาราง */
+.schedule-course {
+  margin: 10px;
+  padding: 12px;
+  min-height: 150px;
+  border-radius: 10px;
+  border-left: 4px solid #00a65a;
+  background: #ecfdf5;
+}
+.schedule-course.blue { background: #eff6ff; border-left-color: #3b82f6; }
+.schedule-course.purple { background: #f5f3ff; border-left-color: #8b5cf6; }
+.schedule-course.orange { background: #fff7ed; border-left-color: #f97316; }
+.schedule-course.teal { background: #f0fdfa; border-left-color: #0d9488; }
+
+.course-time { display: block; color: #64748b; font-size: 11px; margin-bottom: 5px; }
+.schedule-course h4 { margin: 4px 0; font-size: 14px; line-height: 1.4; }
+.schedule-course p { margin: 6px 0; color: #64748b; font-size: 11px; }
+
+.group {
+  display: block;
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px dashed #cbd5e1;
+  font-size: 11px;
+}
+
+.schedule-note {
+  margin-top: 16px;
+  padding: 14px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  color: #92400e;
+  font-size: 13px;
+}
+.schedule-note p { display: inline; margin-left: 5px; }
+
+/* =====================================================
+   6. ส่วนท้ายของเว็บ (FOOTER)
+   ===================================================== */
+.site-footer {
+  margin-top: 20px;
+  padding: 16px;
+  background: #00602f;
+  color: #d1fae5;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* =====================================================
+   7. การรองรับหน้าจออุปกรณ์ต่างๆ
+   ===================================================== */
+@media (max-width: 768px) {
+  .semester { display: none; }
+  .page-heading { align-items: flex-start; flex-direction: column; }
+  .student-info { grid-template-columns: repeat(2, 1fr); }
+  .course-list { grid-template-columns: 1fr; }
+  .schedule-section { overflow-x: auto; }
+}
+
+@media (max-width: 480px) {
+  .schedule-container { padding: 16px 10px; }
+  .student-info { grid-template-columns: 1fr; }
+  .page-heading h2 { font-size: 22px; }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบบริการการศึกษา - หน้าหลัก</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-[#00743d] text-white sticky top-0 z-30 shadow">
+
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <div class="flex items-center gap-3">
+      <img src="MJU_LOGO.svg.webp"
+           class="w-10 h-10 rounded-full bg-white p-0.5"
+           alt="มหาวิทยาลัยแม่โจ้">
+
+      <div>
+        <p class="font-bold">มหาวิทยาลัยแม่โจ้</p>
+        <p class="text-xs text-emerald-100">ระบบบริการการศึกษา</p>
+      </div>
+    </div>
+
+    <!-- เมนู Desktop -->
+    <nav class="hidden lg:flex gap-1 text-sm">
+      <a href="registration.html" class="menu-link">ผลการลงทะเบียน</a>
+      <a href="schedule.html" class="menu-link active">ตารางเรียน/สอบ</a>
+      <a href="#" class="menu-link">ผลการศึกษา</a>
+      <a href="#" class="menu-link">ทะเบียนรายชื่อ</a>
+      <a href="#" class="logout">ออกจากระบบ</a>
+    </nav>
+
+    <button id="navToggle"
+            class="lg:hidden bg-[#00a65a] px-3 py-2 rounded">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- เมนูมือถือ -->
+  <nav id="mobileNav" class="hidden lg:hidden bg-[#00602f]">
+    <a href="registration.html" class="mobile-link">ผลการลงทะเบียน</a>
+    <a href="schedule.html" class="mobile-link">ตารางเรียน/สอบ</a>
+    <a href="#" class="mobile-link">ผลการศึกษา</a>
+    <a href="#" class="mobile-link">ทะเบียนรายชื่อ</a>
+    <a href="#" class="mobile-link text-rose-300">ออกจากระบบ</a>
+  </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+<main class="max-w-6xl mx-auto px-4 py-6">
+
+  <!-- ข้อมูลนักศึกษา -->
+  <section class="bg-gradient-to-r from-[#00743d] to-[#00a65a]
+                  text-white rounded-xl p-5 mb-6
+                  grid sm:grid-cols-3 gap-4 items-center">
+
+    <div class="sm:col-span-2">
+      <p class="text-xs text-emerald-100">ยินดีต้อนรับ</p>
+
+      <h1 class="text-xl sm:text-2xl font-bold">
+        นาย ณัฐกิจ โนวัน
+      </h1>
+
+      <p class="text-sm text-emerald-50 mt-1">
+        รหัสนักศึกษา 0931322793 · คณะวิทยาศาสตร์
+        สาขาวิชาวิทยาการคอมพิวเตอร์
+      </p>
+    </div>
+
+    <div class="bg-white/15 rounded-lg p-3 text-center">
+      <p class="text-3xl font-bold">3.99</p>
+      <p class="text-xs">เกรดเฉลี่ยสะสม</p>
+    </div>
+
+  </section>
+
+
+  <!-- เมนูด่วน -->
+  <section class="mb-8">
+
+    <h2 class="section-label">เมนูด่วน</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+
+      <a href="registration.html" class="quick-menu">
+        📝
+        <span>ผลการลงทะเบียน</span>
+      </a>
+
+      <a href="schedule.html" class="quick-menu">
+        🗓️
+        <span>ตารางเรียน/สอบ</span>
+      </a>
+
+      <a href="#" class="quick-menu">
+        🎓
+        <span>ผลการศึกษา</span>
+      </a>
+
+      <a href="#" class="quick-menu">
+        📋
+        <span>ทะเบียนรายชื่อ</span>
+      </a>
+
+      <a href="#" class="quick-menu">
+        💬
+        <span>เสนอความคิดเห็น</span>
+      </a>
+
+    </div>
+
+
+    <!-- Slideshow -->
+    <div class="overflow-hidden rounded-xl mt-6">
+      <img id="slide"
+           src="4669_25690724165319.jpg"
+           class="w-full"
+           alt="ประกาศมหาวิทยาลัย">
+    </div>
+
+  </section>
+
+
+  <!-- ================= การชำระเงิน ================= -->
+  <section class="mb-8">
+
+    <h2 class="section-label">
+      การชำระเงินค่าธรรมเนียมการศึกษา
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <article class="info-card border-t-4 border-[#00a65a]">
+
+        <h3 class="font-bold text-[#00743d]">
+          ชำระเงินตามกำหนดปกติ
+        </h3>
+
+        <p class="small-text">
+          พิมพ์ใบชำระเงินผ่านระบบบริการการศึกษา
+        </p>
+
+        <ol class="space-y-2 text-sm mt-3">
+          <li>① เข้าสู่ระบบด้วยรหัสนักศึกษา</li>
+          <li>② เลือกเมนูผลการลงทะเบียน</li>
+          <li>③ กดพิมพ์ใบแจ้งชำระเงิน</li>
+        </ol>
+
+        <p class="notice-green">
+          ชำระผ่าน QR Code บนใบแจ้งชำระเงินได้
+        </p>
+
+      </article>
+
+
+      <article class="info-card border-t-4 border-rose-500">
+
+        <h3 class="font-bold text-rose-700">
+          ชำระเงินล่าช้า
+        </h3>
+
+        <p class="small-text">
+          สำหรับนักศึกษาที่พ้นกำหนดชำระเงิน
+        </p>
+
+        <ol class="space-y-2 text-sm mt-3">
+          <li>① เข้าสู่ระบบสำหรับนักศึกษา</li>
+          <li>② เลือกระบบผ่อนผันค่าธรรมเนียม</li>
+          <li>③ ยืนยันข้อมูลและพิมพ์ใบชำระเงิน</li>
+        </ol>
+
+        <p class="notice-red">
+          มีค่าปรับตามระเบียบของมหาวิทยาลัย
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ประกาศ ================= -->
+  <aside class="bg-amber-50 border border-amber-300
+                rounded-xl p-4 flex gap-3">
+
+    <span>⚠️</span>
+
+    <p class="text-sm text-amber-800">
+      กรุณาตรวจสอบกำหนดการชำระเงินให้ครบถ้วน
+      ก่อนทำรายการทุกครั้ง
+    </p>
+
+  </aside>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#00602f] text-emerald-100 text-center text-xs py-4">
+  งานทะเบียนและประมวลผล มหาวิทยาลัยแม่โจ้
+  · ข้อมูลจำลองเพื่อการศึกษา
+</footer>
+
+
+<script>
+/* ================= SLIDESHOW ================= */
+
+const images = [
+  "4669_25690724165319.jpg",
+  "พ้นสภาพ.jpg",
+  "ห้องเรียนอยู่ไหน.gif"
+];
+
+let slideIndex = 0;
+
+setInterval(() => {
+  slideIndex = (slideIndex + 1) % images.length;
+  document.getElementById("slide").src = images[slideIndex];
+}, 3000);
+
+
+/* ================= MOBILE MENU ================= */
+
+document.getElementById("navToggle").onclick = () => {
+  document.getElementById("mobileNav").classList.toggle("hidden");
+};
+</script>
+
+</body>
+</html>
